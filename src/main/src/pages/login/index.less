@@ -1,0 +1,109 @@
+.login_container{
+  user-select: none;
+  padding: 100px;
+  overflow: hidden;
+  .login_bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    margin: auto;
+    background: url("../../../public/static/login_bg.jpg") no-repeat center;
+    background-size: cover;
+  }
+  .title_box{
+    color: #FFFFFF;
+    text-align: left;
+    min-width: 600px;
+    margin-top: 3%;
+    margin-left: 10%;
+    h1{
+      display: inline-block;
+      position: relative;
+      font-size: 50px;
+      font-weight: 600;
+    }
+    h3{
+      max-width: 500px;
+      margin: 10px 0 0;
+      font-size: 26px;
+      font-weight: 300;
+    }
+  }
+  .login_paper{
+    position: relative;
+    animation: addwidth 2s;
+    width: 480px;
+    transition: all 300ms linear;
+    border-radius: 6px;
+    margin-top: 100px;
+    text-align: center;
+    .avatar{
+      animation: rotateZ 2s;
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin-top: -50px;
+      transition: all 300ms linear;
+      background: transparent;
+      transform: rotateZ(360deg);
+      box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.5), 0px 3px 4px 0px rgba(0,0,0,0.5), 0px 1px 8px 0px rgba(0,0,0,0.12);
+    }
+    .avatar_close{
+      transform: rotateX(90deg);
+      box-shadow: none;
+      transition: all 300ms linear;
+    }
+    .avatar_loading{
+      position: absolute;
+      top: -50px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      color: #fe6b8b;
+    }
+    .form_box{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px 0 60px;
+      .text_form{
+        width: 60%;
+        margin-top: 20px;
+        // label{
+        //   font-size: 14px;
+        // }
+      }
+      .form_button{
+        width: 60%;
+        margin-top: 30px;
+        position: relative;
+        .form_button_loading{
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+        }
+      }
+    }
+  }
+  @keyframes addwidth{
+    0% {
+      width: 280px;
+    }
+    100% {
+      width: 480px;
+    }
+  }
+  @keyframes rotateZ{
+    0% {
+      transform: rotateZ(0deg);
+    }
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+}
