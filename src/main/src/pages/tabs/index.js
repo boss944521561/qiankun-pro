@@ -381,7 +381,6 @@ export default class Tabs extends React.Component {
         );
     }
     componentDidMount(){
-        console.log(1111111111111)
         // 延迟动画
         setTimeout(() => {
             this.initSub();

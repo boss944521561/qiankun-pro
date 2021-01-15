@@ -1,5 +1,5 @@
 import './index.less';
-import { echarts_detail } from './components/echarts';
+import { echarts_detail } from '~/echarts/echarts_detail';
 import React from 'react';
 
 export default class Home extends React.Component {

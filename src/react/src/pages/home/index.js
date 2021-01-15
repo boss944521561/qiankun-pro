@@ -1,9 +1,8 @@
 import './index.less';
 import mockData from '~/mock';
-import { echarts_duidie } from './components/echarts';
+import { echarts_duidie } from '~/echarts/echarts_duidie';
 import React from 'react';
 import { Paper } from '@material-ui/core';
-
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +35,6 @@ export default class Home extends React.Component {
             <div className="home_page_column_des">Page View</div>
           </div>
         </div>
-
         <Paper elevation={3} className="login_paper">
           <div id="echarts_duidie"></div>
         </Paper>

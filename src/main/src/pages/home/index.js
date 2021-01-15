@@ -1,6 +1,6 @@
 import './index.less';
 import React from 'react';
-import { echarts_shijie } from './components/echarts';
+import { echarts_shijie } from '~/echarts/echarts_shijie';
 import Button from '@material-ui/core/Button';
 
 export default class Home extends React.Component {

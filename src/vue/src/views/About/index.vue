@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { echarts_vue2 } from './components/echarts';
+import { echarts_vue2 } from '~/echarts/echarts_vue2';
 
 export default {
   name: 'About',

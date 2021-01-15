@@ -9,5 +9,11 @@
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="pmsr"></div>
+  <style>
+    /* MUI搭配乾坤框架bug，主子应用都会动态添加style标签，后者覆盖前者出现样式bug，此处与入口处动态删除双重保障 */
+    .MuiButtonBase-root {
+      padding: 8px 16px !important;
+    }
+  </style>
 </body>
 </html>

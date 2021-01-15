@@ -2,17 +2,6 @@
   "name": "pmsr",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@material-ui/lab": "^4.0.0-alpha.57",
-    "echarts": "^5.0.0",
-    "file-loader": "^6.2.0",
-    "postcss-loader": "^4.1.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "url-loader": "^4.1.1",
-    "webpack": "^4.41.2"
-  },
   "scripts": {
     "start": "rescripts start",
     "build": "rescripts build"
@@ -28,18 +17,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/plugin-transform-react-jsx": "^7.7.0",
-    "@babel/preset-env": "^7.7.1",
-    "@material-ui/core": "^4.11.2",
-    "@rescripts/cli": "^0.0.14",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "less": "^3.13.0",
-    "less-loader": "^7.1.0",
-    "react-scripts": "^3.4.1",
-    "style-loader": "^1.0.0"
   }
 }
