@@ -35,9 +35,6 @@ export async function bootstrap(props) {
 }
 
 function storeTest(props) {
-  props.onGlobalStateChange((value, prev) => {
-    console.log(`%c[子应用${props.name}接收状态]`, 'color: red;font-weight:bold;', value, prev);
-  }, true);
   props.setGlobalState({
     user: {
       name: props.name,

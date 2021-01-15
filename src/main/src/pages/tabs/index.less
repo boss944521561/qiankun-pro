@@ -48,6 +48,13 @@
     .tabsList_listItem_active {
       background:linear-gradient(45deg, rgb(254, 107, 139) 30%, rgb(255, 142, 83) 90%);
     }
+    /* MUI搭配乾坤框架bug，主子应用都会动态添加style标签，后者覆盖前者出现样式bug，此处与入口处动态删除双重保障 */
+    .MuiButtonBase-root {
+      padding: 8px 16px !important;
+    }
+    .collapse_listItem{
+      padding-left: 32px !important;
+    }
   }
   .tabsList-show{
     width: 100%;
@@ -60,9 +67,6 @@
     max-width: 360px;
     color: #fff;
     background: #1A2038;
-  }
-  .collapse_listItem{
-    padding-left: 32px;
   }
   .mainapp-main-right{
     width: 100%;
@@ -89,6 +93,12 @@
     }
     .header_bar{
       background: transparent;
+    }
+    .loadingShow {
+      display: block;
+    }
+    .loadingHide {
+      display: none;
     }
     .toolbar{
       display: flex;

@@ -60,6 +60,18 @@ export default [
         ],
     },
     {
+        title: `It looks like there are several instances of @material-ui/styles initialized in this application. This may cause theme propagation issues, broken class names, specificity issues, and makes your application bigger without a good reason.`,
+        desc: 'qiankun主子应用都使用了material-ui组件会报出警告，说已经初始化过了，再这样的话会出现未知的错误（例如上面说的样式覆盖问题），及代码体积变大（会多加style标签，已用JS动态删除）',
+        author: [
+            {
+                name: 'Mason',
+                time: '2021-01-15',
+                type: true,
+                desc: '架构冲突，没找到MUI源码出处，无好方案暂不处理'
+            }
+        ],
+    },
+    {
         title: 'vue项目内，vue-route跳转后，点击浏览器后退按钮，URL变了，页面不跳转',
         desc: '如最上面的react问题一样，vue路由跳转会缓存html（请参阅文档），因时间问题，暂不过多投入vue项目',
         author: [
@@ -73,25 +85,25 @@ export default [
     },
     {
         title: '警告TypeError: Cannot read property appWrapperGetter of undefined at common.js:301',
-        desc: '在删除Material UI DOM节点时报出警告',
+        desc: '在删除Material UI 组件时报出警告',
         author: [
             {
                 name: 'Mason',
                 time: '2021-01-02',
-                type: false,
-                desc: '已查阅：react语法正常，但仍有警告，(如：{loading && <CircularProgress></CircularProgress>})。没投入时间继续。'
+                type: true,
+                desc: '已查阅：react语法正常，但仍有警告，(如：{loading && <CircularProgress></CircularProgress>})。删除节点MUI内部抛出警告，建议display：none处理'
             }
         ],
     },
     {
-        title: 'vue项目打包后在生产未渲染',
-        desc: '因时间关系暂未修整发布后的优化',
+        title: `[Deprecation] 'window.webkitStorageInfo' is deprecated. Please use 'navigator.webkitTemporaryStorage' or 'navigator.webkitPersistentStorage' instead.`,
+        desc: 'proxySandbox.js:211, qiankun警告语法老旧',
         author: [
             {
                 name: 'Mason',
                 time: '2021-01-15',
-                type: false,
-                desc: '初步猜测相关生产依赖放置到了本地依赖中导致，已更改，如有发布留意一下'
+                type: true,
+                desc: '沙箱代码，打包后会在dist内，main主应用内，暂不处理'
             }
         ],
     },

@@ -69,8 +69,9 @@ export default function App(props) {
   // (生产环境) 整体启动，拥有权限配置通过的路由权限
   let r = [];
   if (props.onGlobalStateChange) { // 整体启动
-    props.onGlobalStateChange(v => {
-      r = v.routeData;
+    props.onGlobalStateChange((value, prev) => {
+      console.log(`%c[子应用${props.name}接收状态]`, 'color: red;font-weight:bold;', value, prev);
+      r = value.routeData;
     }, true);
   } else { // 单独启动
     if (process.env.PMS_MODE === 'dev'){

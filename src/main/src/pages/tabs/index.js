@@ -351,7 +351,7 @@ export default class Tabs extends React.Component {
                             </Toolbar>
                         </AppBar>
                         {/* loading */}
-                        {loading && <LinearProgress color="secondary"/>}
+                        <LinearProgress className={loading ? 'loadingShow' : 'loadingHide'} color="secondary"/>
                         {/* alert */}
                         {alertList.length ? <div className="alert_box">
                             {alertList.map((v, i) => <Snackbar
